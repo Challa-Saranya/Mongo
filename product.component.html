@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <form [formGroup]="myForm">
+        <h2><p>Product Form</p></h2>
+        <div class="form-group">
+          <label for="productname">Product Name</label>
+          <input type="text" class="form-control" id="productname" name="productname" formControlName="productname">
+          <div *ngIf="myForm.controls.productname.errors && (myForm.controls.productname.touched || myForm.controls.productname.dirty)">
+            <div *ngIf="myForm.hasError('required',productname)">
+              Product Name is Required
+
+            </div>
+            <div *ngIf="myForm.hasError('pattern',productname)">
+                Product Name is Invalid Format
+  
+              </div>
+              <div *ngIf="myForm.hasError('minlength',productname)">
+                  Product Name must be atleast 4 characters
+    
+                </div>
+          </div>
+        </div>
+        <div class="form-group">
+            <label for="productdescription">Product Description</label>
+            <input type="text" class="form-control" id="productdescription" name="productdescription" formControlName="productdescription">
+            <div *ngIf="myForm.controls.productdescription.errors && (myForm.controls.productdescription.touched || myForm.controls.productdescription.dirty)">
+              <div *ngIf="myForm.hasError('required',productdescription)">
+                Product Description is Required
+  
+              </div>
+              <div *ngIf="myForm.hasError('pattern',productdescription)">
+                  Product Description is Invalid Format
+    
+                </div>
+                <div *ngIf="myForm.hasError('minlength',productname)">
+                    Product Description must be atleast 4 characters
+      
+                  </div>
+            </div>
+          </div>
+      </form>
+    </div>
+  </div>
+</div>
