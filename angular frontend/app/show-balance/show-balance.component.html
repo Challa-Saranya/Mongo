@@ -1,0 +1,24 @@
+ <br><br>
+
+  <h2 class="text-center">Show Balance</h2>
+  
+  <div class="row justify-content-center align-items-center ">
+
+<form>
+    <div class="form-group">
+      <label for="acc_id">Enter ID:</label>
+      <input type="text" [(ngModel)]="acc_id" placeholder="Enter Account Id" name="acc_id" class="form-control" id="acc_id">
+    </div>
+ <button class="btn btn-success" (click)="showBalance()">Send</button>
+
+ 
+  
+</form>
+
+  </div>
+<br><br>
+<div class=" row justify-content-center align-items-center">
+
+ <h1><p class="font-weight-bolder">{{result}}</p></h1>
+
+</div>

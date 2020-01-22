@@ -1,0 +1,46 @@
+
+ <br><br>
+
+  <h2 class="text-center">Transaction Details</h2>
+  
+  <div class="row justify-content-center align-items-center ">
+<form>
+    <div class="form-group">
+      <label for="acc_id">Enter ID:</label>
+      <input type="text" [(ngModel)]="acc_id" placeholder="Enter Account Id" name="acc_id" class="form-control" id="acc_id">
+    </div>
+
+    <button class="btn btn-success" (click)="history()">Send</button>
+    </form>
+    
+  </div> 
+  
+   <br><br>
+  <div class="row justify-content-center align-items-center ">
+
+   
+<div class="col-md-6">
+    <div *ngIf="display">
+  <table class="table table-striped">
+  <thead>
+  <tr>
+    <th>Transaction Id</th>
+    <th>Operation</th>
+     <th>Account_id</th>
+     <th>Amount</th>
+
+    </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let t of trans">
+          <td>{{t.trans_id}}</td>
+          <td>{{t.operation}}</td>
+          <td>{{t.acc_id}}</td>
+          <td>{{t.amount}}</td>
+        
+          </tr>
+  </tbody>
+    </table>
+</div>
+  </div>
+  </div>

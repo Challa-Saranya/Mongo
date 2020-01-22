@@ -1,0 +1,30 @@
+<br><br>
+
+  <h2 class="text-center">Create Account</h2>
+  <div class="row justify-content-center align-items-center h-100">
+    
+  <form>
+    <div class="form-group">
+      <label for="customer_name">Name:</label>
+      <input type="text" [(ngModel)]="user.customer_name" placeholder="Enter Name" name="customer_name" class="form-control" id="custome_name">
+    </div>
+  
+    <div class="form-group">
+      <label for="Amount">Amount</label>
+      <input [(ngModel)]="user.amount" placeholder="Amount" name="Enter Amount" class="form-control" id="Amount">
+    </div>
+  
+    <div class="form-group">
+      <label for="Mobile">Mobile Number</label>
+      <input [(ngModel)]="user.contact_number" placeholder="Mobile Number" name="Enter Mobile" class="form-control" id="Mobile">
+    </div>
+  
+    <button class="btn btn-success" (click)="createAccount()">Create</button>
+  </form>
+</div>
+
+<div class=" row justify-content-center align-items-center">
+
+ <h4><p class="font-weight-bolder">{{result}}</p></h4>
+
+</div>
